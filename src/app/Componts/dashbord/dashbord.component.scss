@@ -1,0 +1,119 @@
+::ng-deep.mat-toolbar {
+  background: #a03037;
+  color: #ffffff;
+}
+.header-toolbar{
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  opacity: 1;
+  margin-left: 165px;
+}
+
+/************************************************/
+.search-bar {
+  padding-right: 30px;
+  height: 48px;
+  // max-width: 720px;
+  width: 720px;
+  padding-left: 60px;
+}
+
+.search {
+  margin-left: 0;
+  margin-right: 0;
+  // -webkit-border-radius: 5px;
+  // border-radius: 5px;
+
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid transparent;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  // max-width: 720px;
+  position: relative;
+}
+
+.searches-input {
+  height: 46px;
+  padding: 0;
+  margin-left: 56px;
+  margin-right: 49px;
+  overflow: hidden;
+}
+
+.input-search {
+  padding: 11px 0;
+  background: transparent;
+  border: none;
+  font: normal 16px Google Sans, Roboto, Helvetica, Arial, sans-serif;
+  font-variant-ligatures: none;
+  height: 46px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0 5px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  // padding: 0 5px;
+  line-height: 0;
+}
+
+.search-icon {
+  float: left;
+  position: absolute;
+  top: 0;
+}
+
+.search-icon svg {
+  padding: 8px;
+  margin: 3px;
+
+  border-radius: 50%;
+  color: #5f6368;
+  opacity: 1;
+
+  fill: currentColor;
+}
+
+/*************************************************/
+.footer-toolbar {
+  background-color: #2e1d1e;
+  height: 50px;
+  background: #2e1d1e 0% 0% no-repeat padding-box;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  height: 49px;
+  width: 100%;
+}
+
+.footer-text {
+  text-align: left;
+  // font-size: ;
+  font-size: small;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  // height: 15px;
+  font-weight: 100;
+  margin-left: 165px;
+}
