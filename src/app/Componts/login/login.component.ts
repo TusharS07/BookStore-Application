@@ -1,0 +1,109 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatTabChangeEvent } from '@angular/material/tabs';
+import { Router } from '@angular/router';
+import { UserServiceService } from 'src/app/Services/UserService/user-service.service';
+
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
+})
+export class LoginComponent implements OnInit {
+
+  mainContainerColor = '#707070'; // Default background color
+
+  hide = true;
+  login!: FormGroup;
+  signup!: FormGroup;
+
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserServiceService,
+    private snackBar: MatSnackBar,
+    private route: Router
+  ) {
+
+  }
+
+  ngOnInit(): void {
+    this.login = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    })
+
+    this.signup = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      mobNo: ['', [Validators.required, Validators.pattern('[789][0-9]{9}')]]
+    })
+  }
+
+
+
+  onTabChange(event: MatTabChangeEvent) {
+    if (event.index === 0) {
+      this.mainContainerColor = '#878787'; // Change to desired color when "Login" tab is selected
+    } else if (event.index === 1) {
+      this.mainContainerColor = '#707070'; // Change to desired color when "Signup" tab is selected
+    }
+  }
+
+
+  loginUser() {
+    if (this.login.valid) {
+      // console.log("Login Data :", this.login.value);
+
+      let sendData = {
+        email: this.login.value.email,
+        password: this.login.value.password
+      }
+
+      console.log(sendData);
+      
+
+      this.userService.login(sendData).subscribe((res: any) => {
+        console.log(res);
+        this.snackBar.open(res.message, '', {
+          duration: 2000
+        });
+
+        localStorage.setItem('token', res.result);
+
+        // this.route.navigateByUrl('/dashboard')
+
+      })
+    } else {
+      this.snackBar.open("please enter valid credential's", '', {
+        duration: 2000
+      });
+    }
+
+  }
+
+  registerNewUser(){
+    if (this.signup.valid){
+      let sendData = {
+        fullName: this.signup.value.name,
+        email: this.signup.value.email,
+        password: this.signup.value.password,
+        phone: this.signup.value.mobNo
+      }
+
+      console.log(sendData);
+
+      this.userService.registerNewUser(sendData).subscribe((res:any) =>{
+        console.log(res);
+        this.snackBar.open(res.message, '', {
+          duration: 2000
+        });
+      })
+      
+    }
+  }
+
+}
