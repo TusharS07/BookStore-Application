@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
 
         localStorage.setItem('token', res.result);
 
-        // this.route.navigateByUrl('/dashboard')
+        this.route.navigateByUrl('/dashboard')
 
       })
     } else {
