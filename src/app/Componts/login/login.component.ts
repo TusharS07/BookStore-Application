@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   login!: FormGroup;
   signup!: FormGroup;
 
-  changeMainContainerBgCOlor:boolean= false;
+  changeMainContainerBgCOlor: boolean = false;
 
 
   constructor(
@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
       }
 
       console.log(sendData);
-      
+
 
       this.userService.login(sendData).subscribe((res: any) => {
         console.log(res);
@@ -83,8 +83,8 @@ export class LoginComponent implements OnInit {
 
   }
 
-  registerNewUser(){
-    if (this.signup.valid){
+  registerNewUser() {
+    if (this.signup.valid) {
       let sendData = {
         fullName: this.signup.value.name,
         email: this.signup.value.email,
@@ -94,13 +94,13 @@ export class LoginComponent implements OnInit {
 
       console.log(sendData);
 
-      this.userService.registerNewUser(sendData).subscribe((res:any) =>{
+      this.userService.registerNewUser(sendData).subscribe((res: any) => {
         console.log(res);
         this.snackBar.open(res.message, '', {
           duration: 2000
         });
       })
-      
+
     }
   }
 

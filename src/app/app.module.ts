@@ -19,6 +19,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DisplayAllBooksComponent } from './Componts/display-all-books/display-all-books.component';
 import { GetAllBooksComponent } from './Componts/get-all-books/get-all-books.component';
 import {MatSelectModule} from '@angular/material/select';
+import { SearchFilterPipe } from './Pipes/SearchFilterPipe/search-filter.pipe';
 
 
 
@@ -29,7 +30,8 @@ import {MatSelectModule} from '@angular/material/select';
     DashbordComponent,
     LoginComponent,
     DisplayAllBooksComponent,
-    GetAllBooksComponent
+    GetAllBooksComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,

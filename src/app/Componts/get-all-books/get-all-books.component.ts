@@ -7,20 +7,20 @@ import { BookServiceService } from 'src/app/Services/booksService/book-service.s
   styleUrls: ['./get-all-books.component.scss']
 })
 export class GetAllBooksComponent implements OnInit {
- 
 
-  selectedValue: any;
+
+  selectedValue: any = "";
   allBooksData = [];
 
 
-  constructor(private bookService: BookServiceService){
+  constructor(private bookService: BookServiceService) {
 
   }
 
   SortOption: any[] = [
-    {value: 'lowToHigh', viewValue: 'Price: Low to High'},
-    {value: 'HighToLow', viewValue: 'Price: High to Low'},
-    {value: 'newestArrivals', viewValue: 'Newest Arrivals'}
+    { value: 'lowToHigh', viewValue: 'Price: Low to High' },
+    { value: 'HighToLow', viewValue: 'Price: High to Low' },
+    { value: 'newestArrivals', viewValue: 'Newest Arrivals' }
   ]
 
 
@@ -28,19 +28,15 @@ export class GetAllBooksComponent implements OnInit {
     this.getAllDisplay();
   }
 
-  sortBooks(){
+  sortBooks() {
 
   }
 
   getAllDisplay() {
-    this.bookService.getAllBooks().subscribe((res:any) => {
+    this.bookService.getAllBooks().subscribe((res: any) => {
       console.log(res.result);
       this.allBooksData = res.result.reverse();
-      console.log(this.allBooksData); 
+      console.log(this.allBooksData);
     })
   }
-
- 
-
-
 }
