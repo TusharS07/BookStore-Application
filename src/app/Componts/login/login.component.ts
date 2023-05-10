@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   login!: FormGroup;
   signup!: FormGroup;
 
+  changeMainContainerBgCOlor:boolean= false;
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -45,12 +47,8 @@ export class LoginComponent implements OnInit {
 
 
 
-  onTabChange(event: MatTabChangeEvent) {
-    if (event.index === 0) {
-      this.mainContainerColor = '#878787'; // Change to desired color when "Login" tab is selected
-    } else if (event.index === 1) {
-      this.mainContainerColor = '#707070'; // Change to desired color when "Signup" tab is selected
-    }
+  onTabChange() {
+    this.changeMainContainerBgCOlor = !this.changeMainContainerBgCOlor
   }
 
 

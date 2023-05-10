@@ -1,0 +1,123 @@
+.main {
+  margin-top: 22px;
+  display: flex;
+  padding-left: 182px;
+  padding-right: 182px;
+  height: fit-content;
+  word-break: break-all;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  max-width: 1550px;
+}
+
+.books-heading {
+  display: flex;
+  gap: 6px;
+}
+
+.books-span {
+  letter-spacing: 0px;
+  color: #0a0102;
+  opacity: 1;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 25px;
+  // line-height: 13px;
+}
+
+.books-count {
+  letter-spacing: 0px;
+  color: #9d9d9d;
+  opacity: 1;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/******************************************************/
+.select-box{
+    width: 161px;
+height: 30px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #E2E2E2;
+border-radius: 1px;
+opacity: 1;
+}
+
+@media only screen and (max-width: 300px) {
+    
+    .main {
+        margin-top: 22px;
+        display: flex;
+        padding-left: 10px;
+      padding-right: 10px;
+        height: fit-content;
+        word-break: break-all;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+        max-width: 1550px;
+      }
+
+  }
+  
+  @media only screen and (min-width: 301px) and (max-width: 400px) {
+    
+    
+    .main {
+        margin-top: 22px;
+        display: flex;
+        padding-left: 20px;
+      padding-right: 20px;
+        height: fit-content;
+        word-break: break-all;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+        max-width: 1550px;
+      }
+  }
+  
+  @media only screen and (min-width: 401px) and (max-width: 600px) {
+    .main {
+     
+    }
+
+    .main {
+        margin-top: 22px;
+        display: flex;
+        padding-left: 30px;
+      padding-right: 30px;
+        height: fit-content;
+        word-break: break-all;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+        max-width: 1550px;
+      }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .main {
+        margin-top: 22px;
+        display: flex;
+        padding-left: 50px;
+      padding-right: 50px;
+        height: fit-content;
+        word-break: break-all;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+        max-width: 1550px;
+      }
+  }

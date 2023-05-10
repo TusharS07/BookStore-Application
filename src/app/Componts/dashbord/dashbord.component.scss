@@ -94,6 +94,50 @@ button {
   fill: currentColor;
 }
 
+/***********************************************/
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  opacity: 1;
+  cursor: pointer;
+  border-left: 1px solid #7e262be6;
+  // border-right: 1px solid #7e262be6;
+}
+
+.material-symbols-sharp {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; /* Medium */
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.45px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  opacity: 1;
+  cursor: pointer;
+  border-left: 1px solid #7e262be6;
+  border-right: 1px solid #7e262be6;
+  padding-top: 6px;
+}
+
+.cart-img {
+  width: 15px;
+  height: 16px;
+  margin-bottom: 7px;
+}
+
 /*************************************************/
 .footer-toolbar {
   background-color: #2e1d1e;
@@ -118,6 +162,83 @@ button {
   margin-left: 165px;
 }
 
+/***************************************/
+.profile-matMenu {
+  width: 200px;
+  height: 182px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+.hello {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600; /* Medium */
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #0a0102;
+  opacity: 1;
+}
+
+.menu-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 10px;
+
+  width: 80px;
+  height: 16px;
+  /* UI Properties */
+  opacity: 1;
+  cursor: pointer;
+}
+
+.profile-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; /* Medium */
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #878787;
+  opacity: 1;
+}
+
+::ng-deep.mat-mdc-menu-content {
+  margin: 0 !important;
+  padding: 15px 10px 20px 26px !important;
+  display: flex;
+  flex-direction: column !important;
+  gap: 10px;
+  list-style-type: none !important;
+}
+
+.logoutButton {
+  width: 123px;
+  height: 33px;
+  /* UI Properties */
+  border: 1px solid #a03037;
+  border-radius: 2px;
+  opacity: 1;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; /* Medium */
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #a03037;
+  opacity: 1;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+::ng-deep.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: 200px !important;
+}
+
 /***********************************/
 @media only screen and (max-width: 600px) {
   .logo {
@@ -130,5 +251,21 @@ button {
 
   .footer-text {
     margin-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
+    opacity: 1;
+    cursor: pointer;
+    border-left: 1px solid #7e262be6;
+    // border-right: 1px solid #7e262be6;
+    margin-left: 200px;
   }
 }

@@ -20,12 +20,44 @@
           <path d="M0,0h24v24H0V0z" fill="none"></path>
         </svg>
       </button>
-
     </div>
   </div>
+
+  <div class="profile" [matMenuTriggerFor]="menu">
+    <img src="../../../assets/profile.PNG" alt="">
+    <span class="material-symbols-sharp">
+      Neeraja
+    </span>
+  </div>
+  <mat-menu #menu="matMenu" class="profile-matMenu">
+    <span class="hello">Hello Neeraja,</span>
+    
+    <div class="menu-profile" >
+      <img src="../../../assets/person_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+      <span class="profile-text">Profile</span>
+    </div>
+    <div class="menu-profile" >
+      <img src="../../../assets/myorders.svg" alt="" style="transform: scaleY(-1)">
+      <span class="profile-text">My Order</span>
+    </div>
+    <div class="menu-profile" >
+      <img src="../../../assets/favorite_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+      <span class="profile-text">Wishlist</span>
+    </div>
+
+    <button class="logoutButton">Logout</button>
+  </mat-menu>
+
+  <div class="cart">
+    <img src="../../../assets/supermarket.svg" alt="" class="cart-img">
+    <span class="material-symbols-sharp">
+      Cart
+    </span>
+  </div>
+
 </mat-toolbar>
 
-
+<app-get-all-books></app-get-all-books>
 
 
 <!--****************Footer****************** -->

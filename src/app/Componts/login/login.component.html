@@ -1,4 +1,4 @@
-<div class="main" [class.login-selected]="mainContainerColor === '#878787'">
+<div class="main" [ngStyle]="changeMainContainerBgCOlor ? {'background-color': '#878787'} : {'background-color': '#707070'}">
     <mat-card class="logo-img-main">
         <mat-card-content class="logo-content">
             <img src="../../../assets/login_signup_pageLogo.png" alt="" class="logo">
@@ -8,7 +8,7 @@
 
 
       <mat-card class="login-signup-contanier">
-        <mat-tab-group animationDuration="0ms" (selectedTabChange)="onTabChange($event)">
+        <mat-tab-group animationDuration="0ms" (click)="onTabChange()">
             <mat-tab label="LOGIN">
                 <mat-card class="sub-container">
                     <form class="form-container" [formGroup]="login">

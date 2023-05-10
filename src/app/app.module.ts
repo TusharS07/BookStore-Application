@@ -15,6 +15,11 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import { DisplayAllBooksComponent } from './Componts/display-all-books/display-all-books.component';
+import { GetAllBooksComponent } from './Componts/get-all-books/get-all-books.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -22,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     DashbordComponent,
-    LoginComponent
+    LoginComponent,
+    DisplayAllBooksComponent,
+    GetAllBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatSnackBarModule,
     HttpClientModule,
+    MatMenuModule,
+    MatSelectModule
     
     
   ],

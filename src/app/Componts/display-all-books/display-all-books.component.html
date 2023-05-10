@@ -1,0 +1,30 @@
+<div class="main">
+    <mat-card class="book-cart" *ngFor="let book of AllBooksData">
+         
+            <div class="book-img-div">
+                <img src="../../../assets/dont-Make-Me-Think.png" alt="" style=" position: absolute;
+                opacity: 1;
+                width: 105px;
+                height: 135px;">
+                <div class="outOfStock" [class.outOfStockIfNotZero]="book.quantity > 0">out of stock</div>
+            </div>
+
+            <span class="book-name">{{book.bookName}}</span>
+            <span class="author-name">{{book.author}}</span>
+
+            <div class="rating-and-count">
+                <div class="rating">
+                    4.5
+                    <img src="../../../assets/RatingstarImg.svg" alt="" style=" margin: 2px 0 0 2px;
+                    height: 10px;">
+                </div>
+                <span class="count">(20)</span>
+            </div>
+
+            <div class="price">
+                <span class="discount-price">Rs. {{book.discountPrice}}</span>
+                <span class="main-price">Rs.{{book.price}}</span>
+            </div>
+        
+    </mat-card>
+</div>
