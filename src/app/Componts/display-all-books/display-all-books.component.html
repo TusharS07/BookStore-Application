@@ -1,7 +1,7 @@
 <div class="main">
     <mat-card class="book-cart" *ngFor="let book of AllBooksData | searchFilter : SearchText">
 
-        <div class="book-img-div">
+        <div class="book-img-div" (click)="showBookDetails(book)">
             <img src="../../../assets/dont-Make-Me-Think.png" alt="" style=" position: absolute;
                 opacity: 1;
                 width: 105px;

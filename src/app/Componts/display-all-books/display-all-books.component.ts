@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataServiceService } from 'src/app/Services/DataService/data-service.service';
 
 @Component({
@@ -14,9 +15,11 @@ export class DisplayAllBooksComponent implements OnInit {
   SearchText: any;
 
   constructor(
-    private dataService: DataServiceService
+    private dataService: DataServiceService,
+    private route: Router
   ) { }
 
+  
   ngOnInit(): void {
     this.filterBooksAsPerSearch();
   }
@@ -25,5 +28,10 @@ export class DisplayAllBooksComponent implements OnInit {
     this.dataService.receiveSearchValue.subscribe((res) => {
       this.SearchText = res;
     })
+  }
+
+  showBookDetails(book:any){
+    this.dataService.sendSearchValue(book);
+    this.route.navigateByUrl('/dashboard/quickView');
   }
 }
