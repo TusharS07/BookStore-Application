@@ -26,7 +26,12 @@
             </div>
 
             <div class="buttons-cart-wishlist">
-                <button class="addToCartButton" >ADD TO BAG</button>
+                <button class="addToCartButton" *ngIf="!hideCartButton" (click)="addToCart()">ADD TO BAG</button>
+                <div *ngIf="hideCartButton" class="increase-qty">
+                    <button class="decrease-increase-button" [disabled]="qty === 1" (click)=" decreaseQTY()">-</button>
+                    <div class="qty">{{qty}}</div>
+                    <button class="decrease-increase-button" (click)="increaseQTY()">+</button>
+                </div>
                 <button class="wishListButton"><img src="../../../assets/heart.svg" alt=""> WISHLIST</button>
             </div>
         </div>
@@ -97,7 +102,9 @@
                     <img src="../../../assets/star_border_black_18dp.svg" alt="">
                 </div>
 
-                <p class="review-msg">Good product. Even though the translation could have been better, Chanakya's neeti are thought provoking. Chanakya has written on many different topics and his writings are succinct.</p>
+                <p class="review-msg">Good product. Even though the translation could have been better, Chanakya's neeti
+                    are thought provoking. Chanakya has written on many different topics and his writings are succinct.
+                </p>
             </div>
             <br>
 
@@ -118,7 +125,9 @@
                     <img src="../../../assets/star_border_black_18dp.svg" alt="">
                 </div>
 
-                <p class="review-msg">Good product. Even though the translation could have been better, Chanakya's neeti are thought provoking. Chanakya has written on many different topics and his writings are succinct.</p>
+                <p class="review-msg">Good product. Even though the translation could have been better, Chanakya's neeti
+                    are thought provoking. Chanakya has written on many different topics and his writings are succinct.
+                </p>
             </div>
         </div>
 

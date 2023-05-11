@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class QuickViewBookDataComponent {
 
+  hideCartButton:boolean= false;
+  qty:number = 1;
+
+  addToCart(){
+    this.hideCartButton = true;
+  }
+
+  increaseQTY(){
+    this.qty = this.qty + 1;
+  }
+
+  decreaseQTY(){
+    this.qty = this.qty - 1;
+  }
 }
