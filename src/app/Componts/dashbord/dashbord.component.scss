@@ -152,7 +152,8 @@ button {
   align-items: center;
   height: 49px;
   width: 100%;
-  position: fixed;
+  position: relative;
+  bottom: 0;
 }
 
 .footer-text {

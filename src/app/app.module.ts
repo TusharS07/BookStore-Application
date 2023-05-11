@@ -20,6 +20,8 @@ import { DisplayAllBooksComponent } from './Componts/display-all-books/display-a
 import { GetAllBooksComponent } from './Componts/get-all-books/get-all-books.component';
 import {MatSelectModule} from '@angular/material/select';
 import { SearchFilterPipe } from './Pipes/SearchFilterPipe/search-filter.pipe';
+import { QuickViewBookDataComponent } from './Componts/quick-view-book-data/quick-view-book-data.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -31,7 +33,8 @@ import { SearchFilterPipe } from './Pipes/SearchFilterPipe/search-filter.pipe';
     LoginComponent,
     DisplayAllBooksComponent,
     GetAllBooksComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    QuickViewBookDataComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +52,8 @@ import { SearchFilterPipe } from './Pipes/SearchFilterPipe/search-filter.pipe';
     MatSnackBarModule,
     HttpClientModule,
     MatMenuModule,
-    MatSelectModule
-    
-    
+    MatSelectModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
