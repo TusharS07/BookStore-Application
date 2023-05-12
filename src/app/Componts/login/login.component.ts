@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
           duration: 2000
         });
 
-        localStorage.setItem('token', res.result);
+        localStorage.setItem('token', res.result.accessToken);
 
         this.route.navigateByUrl('/dashboard')
 

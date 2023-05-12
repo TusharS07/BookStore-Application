@@ -5,6 +5,7 @@ import { DashbordComponent } from './Componts/dashbord/dashbord.component';
 import { AuthguardGuard } from './AuthGuard/authguard.guard';
 import { GetAllBooksComponent } from './Componts/get-all-books/get-all-books.component';
 import { QuickViewBookDataComponent } from './Componts/quick-view-book-data/quick-view-book-data.component';
+import { CartComponent } from './Componts/cart/cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashbordComponent, canActivate: [AuthguardGuard],
     children: [
       { path: '', component: GetAllBooksComponent },
-      { path: 'quickView', component: QuickViewBookDataComponent }
+      { path: 'quickView', component: QuickViewBookDataComponent, canActivate: [AuthguardGuard] },
+      { path: 'cart', component: CartComponent }
     ]
 }
 ];

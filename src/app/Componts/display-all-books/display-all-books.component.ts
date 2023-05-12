@@ -14,6 +14,8 @@ export class DisplayAllBooksComponent implements OnInit {
 
   SearchText: any;
 
+  sortValue: any;
+
   constructor(
     private dataService: DataServiceService,
     private route: Router
@@ -22,11 +24,18 @@ export class DisplayAllBooksComponent implements OnInit {
   
   ngOnInit(): void {
     this.filterBooksAsPerSearch();
+    this.sortBooksAsPerPrice();
   }
 
   filterBooksAsPerSearch() {
     this.dataService.receiveSearchValue.subscribe((res) => {
       this.SearchText = res;
+    })
+  }
+
+  sortBooksAsPerPrice(){
+    this.dataService.receiveSearchValueSort.subscribe((res) => {
+      this.sortValue = res;
     })
   }
 

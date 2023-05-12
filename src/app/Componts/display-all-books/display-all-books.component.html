@@ -1,5 +1,5 @@
 <div class="main">
-    <mat-card class="book-cart" *ngFor="let book of AllBooksData | searchFilter : SearchText">
+    <mat-card class="book-cart" *ngFor="let book of  AllBooksData| searchFilter : SearchText  | sortPipe : sortValue ">
 
         <div class="book-img-div" (click)="showBookDetails(book)">
             <img src="../../../assets/dont-Make-Me-Think.png" alt="" style=" position: absolute;

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { DataServiceService } from 'src/app/Services/DataService/data-service.service';
 import { BookServiceService } from 'src/app/Services/booksService/book-service.service';
 
 @Component({
@@ -13,9 +14,15 @@ export class GetAllBooksComponent implements OnInit {
   allBooksData = [];
 
 
-  constructor(private bookService: BookServiceService) {
+  constructor(
+    private bookService: BookServiceService,
+    private dataService: DataServiceService
+    ) {
 
   }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   this.sortBooks();
+  // }
 
   SortOption: any[] = [
     { value: 'lowToHigh', viewValue: 'Price: Low to High' },
@@ -28,9 +35,26 @@ export class GetAllBooksComponent implements OnInit {
     this.getAllDisplay();
   }
 
-  sortBooks() {
-
+  onSortOptionChange(){
+    console.log(this.selectedValue);
+    // this.sortBooks();
+    this.dataService.sendSearchValueSort(this.selectedValue);
   }
+
+  // sortBooks() {
+  //   if (this.selectedValue === 'lowToHigh') {
+  //     this.allBooksData = this.allBooksData.sort((a:any,b:any) => {
+  //       return a.discountPrice - b.discountPrice;
+  //     })
+  //     console.log(this.allBooksData);
+      
+  //   } else if (this.selectedValue === 'HighToLow') {
+  //     this.allBooksData = this.allBooksData.sort((a:any,b:any) => {
+  //       return b.discountPrice - a.discountPrice;
+  //     })
+  //     console.log(this.allBooksData);
+  //   } 
+  // }
 
   getAllDisplay() {
     this.bookService.getAllBooks().subscribe((res: any) => {

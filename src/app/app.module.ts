@@ -22,6 +22,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { SearchFilterPipe } from './Pipes/SearchFilterPipe/search-filter.pipe';
 import { QuickViewBookDataComponent } from './Componts/quick-view-book-data/quick-view-book-data.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { SortPipePipe } from './Pipes/sortPipe/sort-pipe.pipe';
+import { CartComponent } from './Componts/cart/cart.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -34,7 +37,9 @@ import {MatDividerModule} from '@angular/material/divider';
     DisplayAllBooksComponent,
     GetAllBooksComponent,
     SearchFilterPipe,
-    QuickViewBookDataComponent
+    QuickViewBookDataComponent,
+    SortPipePipe,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,8 @@ import {MatDividerModule} from '@angular/material/divider';
     HttpClientModule,
     MatMenuModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

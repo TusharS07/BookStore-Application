@@ -4,7 +4,7 @@
     <span class="books-count">({{allBooksData.length}})</span>
   </div>
   <div>
-    <select [(ngModel)]="selectedValue" class="select-box">
+    <select [(ngModel)]="selectedValue" class="select-box" (change)="onSortOptionChange()">
       <option value="">Sort by relevance</option>
       <option *ngFor="let sort of SortOption" [value]="sort.value">
         {{sort.viewValue}}
